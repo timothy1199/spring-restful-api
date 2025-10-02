@@ -48,3 +48,8 @@ CREATE TABLE addresses(
 );
 
 select * from addresses;
+
+DELETE FROM addresses;
+
+DELETE FROM CONTACTS;
+DELETE FROM users;

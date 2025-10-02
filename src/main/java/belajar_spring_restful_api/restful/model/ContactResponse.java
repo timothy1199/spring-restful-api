@@ -6,12 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class WebResponse<T> {
+public class ContactResponse {
 
-    private T data;
-    private String errors;
-    private PagingResponse paging;
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String email;
+
+
 }
