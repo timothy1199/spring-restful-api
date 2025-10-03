@@ -24,12 +24,12 @@ public class ProductService {
                 .map(entity -> constructEntity(entity, request))
                 .orElseGet(() -> constructEntity(null, request));
         productRepository.save(entityToSave);
+
         return constructResponseDTO(entityToSave);
     }
 
     private Product constructEntity(Product entityExist, ProductRequestDTO request){
         if (request == null) return null;
-
         return Product.builder()
                 .id(entityExist != null ? entityExist.getId() : null)
                 .productName(request.getProductName())
