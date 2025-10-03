@@ -19,7 +19,6 @@ public class ProductService {
 
     public ProductResponseDTO saveUpdate(ProductRequestDTO request){
         validationService.validate(request);
-
         Product entityToSave = Optional.ofNullable(request.getId())
                 .flatMap(productRepository::findById)
                 .map(entity -> constructEntity(entity, request))
