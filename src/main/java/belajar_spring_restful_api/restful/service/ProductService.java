@@ -25,7 +25,6 @@ public class ProductService {
                 .orElseGet(() -> constructEntity(null, request));
 
         productRepository.save(entityToSave);
-
         return constructResponseDTO(entityToSave);
     }
 
