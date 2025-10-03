@@ -23,7 +23,6 @@ public class ProductService {
                 .flatMap(productRepository::findById)
                 .map(entity -> constructEntity(entity, request))
                 .orElseGet(() -> constructEntity(null, request));
-
         productRepository.save(entityToSave);
         return constructResponseDTO(entityToSave);
     }
