@@ -30,6 +30,7 @@ public class ProductService {
 
     private Product constructEntity(Product entityExist, ProductRequestDTO request){
         if (request == null) return null;
+
         return Product.builder()
                 .id(entityExist != null ? entityExist.getId() : null)
                 .productName(request.getProductName())
